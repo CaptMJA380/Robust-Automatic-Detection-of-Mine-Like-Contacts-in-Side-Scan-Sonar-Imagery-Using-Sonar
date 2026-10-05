@@ -1,0 +1,10 @@
+# SECONDARY_STRESS_TEST Configuration
+path: /Users/captmj/Downloads/New_Dataset/milco_dataset
+train: /Users/captmj/Downloads/New_Dataset/milco_dataset/splits/secondary_stress_test_train.txt
+val: /Users/captmj/Downloads/New_Dataset/milco_dataset/splits/secondary_stress_test_val.txt
+test: /Users/captmj/Downloads/New_Dataset/milco_dataset/splits/secondary_stress_test_test.txt
+
+nc: 2
+names:
+  0: MILCO
+  1: NOMBO

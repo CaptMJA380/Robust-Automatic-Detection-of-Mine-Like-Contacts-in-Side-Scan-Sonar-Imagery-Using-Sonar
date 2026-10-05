@@ -1,0 +1,17 @@
+path: /Users/captmj/Downloads/New_Dataset/milco_dataset
+
+train:
+  - images/2010
+  - images/2015
+  - images/2017
+
+val:
+  - images/2018
+
+test:
+  - images/2021
+
+nc: 2
+names:
+  0: MILCO
+  1: NOMBO

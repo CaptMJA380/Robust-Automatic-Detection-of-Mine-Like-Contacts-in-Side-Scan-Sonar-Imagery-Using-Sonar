@@ -1,0 +1,10 @@
+# PRIMARY_EXPERIMENT Configuration
+path: /Users/captmj/Downloads/New_Dataset/milco_dataset
+train: /Users/captmj/Downloads/New_Dataset/milco_dataset/splits/primary_experiment_train.txt
+val: /Users/captmj/Downloads/New_Dataset/milco_dataset/splits/primary_experiment_val.txt
+test: /Users/captmj/Downloads/New_Dataset/milco_dataset/splits/primary_experiment_test.txt
+
+nc: 2
+names:
+  0: MILCO
+  1: NOMBO
