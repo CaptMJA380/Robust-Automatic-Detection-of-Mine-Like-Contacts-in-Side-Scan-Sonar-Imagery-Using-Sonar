@@ -1,0 +1,15 @@
+# Jupyter & Python
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Operating System artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+__MACOSX/

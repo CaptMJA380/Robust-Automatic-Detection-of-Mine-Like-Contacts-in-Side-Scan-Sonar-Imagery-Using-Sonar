@@ -1,0 +1,9 @@
+path: /Users/captmj/Downloads/New_Dataset/milco_dataset/yolo_primary
+train: images/train
+val: images/val
+test: images/test
+
+nc: 2
+names:
+  0: MILCO
+  1: NOMBO
