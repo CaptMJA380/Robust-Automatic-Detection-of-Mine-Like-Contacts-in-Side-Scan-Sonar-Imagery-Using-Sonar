@@ -80,7 +80,6 @@ The models were benchmarked under identical task definitions (Class 0: MILCO, Cl
 
 | Model | Evaluation Split | Precision | Recall | mAP@0.50 | mAP@0.50:0.95 | Notes |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **YOLOv8s (1 Epoch - Aborted)** | Validation (84 img) | 24.8% | 22.6% | 14.3% | 5.95% | Aborted due to MPS gradient instability |
 | **YOLOv4 Darknet (5,000 iter)** | Random Test Split | 51.0% | 80.0% | 75.5% | — | $\tau=0.01$; High False Alarm Rate (137 FP vs 140 TP) |
 | **YOLOv8s (100 Epochs - CUDA)** | **Validation (84 img)** | **74.1%** | **51.2%** | **57.6%** | **30.9%** | **Optimal convergence, low false alarm rate** |
 | **YOLOv8s (100 Epochs - CUDA)** | **Unseen 2018 Test (564 img)** | **39.1%** | **18.1%** | **14.8%** | **6.19%** | **Strict Year-Disjoint domain shift benchmark** |
