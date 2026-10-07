@@ -3,3 +3,4 @@
 *.conv.* filter=lfs diff=lfs merge=lfs -text
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
+runs/detect/yolo11s_primary_100epochs/weights/*.pt filter=lfs diff=lfs merge=lfs -text

@@ -81,12 +81,28 @@ The models were benchmarked under identical task definitions (Class 0: MILCO, Cl
 | Model | Evaluation Split | Precision | Recall | mAP@0.50 | mAP@0.50:0.95 | Notes |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
 | **YOLOv4 Darknet (5,000 iter)** | Random Test Split | 51.0% | 80.0% | 75.5% | — | $\tau=0.01$; High False Alarm Rate (137 FP vs 140 TP) |
-| **YOLOv8s (100 Epochs - CUDA)** | **Validation (84 img)** | **74.1%** | **51.2%** | **57.6%** | **30.9%** | **Optimal convergence, low false alarm rate** |
-| **YOLOv8s (100 Epochs - CUDA)** | **Unseen 2018 Test (564 img)** | **39.1%** | **18.1%** | **14.8%** | **6.19%** | **Strict Year-Disjoint domain shift benchmark** |
+| **YOLOv8s (100 Epochs)** | Validation (84 img) | 74.1% | 51.2% | 57.6% | 30.9% | Baseline SOTA detector |
+| **YOLOv8s (100 Epochs)** | Unseen 2018 Test (564 img) | 39.1% | 18.1% | 14.8% | 6.19% | Strict Year-Disjoint domain shift |
+| **YOLO11s (100 Epochs)** | **Validation (84 img)** | **63.3%** | **47.6%** | **53.2%** | **30.2%** | **C3k2 & SPPF backbone architecture** |
+| **YOLO11s (100 Epochs)** | **Unseen 2018 Test (564 img)** | **42.7%** | **18.5%** | **17.8%** | **7.18%** | **+20.0% mAP@0.50 gain over YOLOv8s under domain shift** |
 
-### Per-Class Breakdown on Unseen 2018 Survey (Year-Disjoint Test):
-- **MILCO Threats**: Precision: **26.3%** | Recall: **18.8%** | mAP@0.50: **17.0%**
-- **NOMBO Clutter**: Precision: **52.0%** | Recall: **17.4%** | mAP@0.50: **12.6%**
+### Direct Comparison on Unseen 2018 Test Survey (564 Images, 142 Targets):
+
+| Metric | YOLOv8s (100 Epochs) | YOLO11s (100 Epochs) | Difference / Improvement |
+| :--- | :---: | :---: | :---: |
+| **mAP@0.50 (All Classes)** | 14.82% | **17.78%** | **+2.96% (+20.0% relative improvement)** |
+| **mAP@0.50:0.95 (All Classes)** | 6.19% | **7.18%** | **+0.99% (+16.0% relative improvement)** |
+| **MILCO mAP@0.50** | 17.03% | **25.10%** | **+8.07% (+47.4% relative improvement on mine targets!)** |
+| **NOMBO mAP@0.50** | 12.60% | 10.45% | -2.15% |
+| **True Positives (TP)** | 17 | **29** | **+70.6% (+12 True Positives detected)** |
+| ↳ *MILCO TPs* | 12 | **24** | **+100% (Doubled detected mine targets!)** |
+| ↳ *NOMBO TPs* | 5 | 5 | Equal (5) |
+| **False Positives (FP)** | 29 | **28** | -1 (-3.4% fewer false alarms) |
+| ↳ *FP on Empty Seabed* | 16 | **14** | -2 (-12.5% fewer empty seabed false alarms) |
+| **False Negatives (FN)** | 125 | **113** | **-12 (-9.6% fewer missed contacts)** |
+| **Operational Precision ($P$)** | 36.96% | **50.88%** | **+13.92% gain** |
+| **Operational Recall ($R$)** | 11.97% | **20.42%** | **+8.45% gain** |
+| **Operational F1-Score** | 0.1809 | **0.2915** | **+61.1% higher F1-score** |
 
 ---
 
