@@ -1,0 +1,14 @@
+Category,Count
+True Positives (MILCO),12.0
+True Positives (NOMBO),5.0
+Total True Positives,17.0
+False Positives (MILCO),27.0
+False Positives (NOMBO),2.0
+False Positives on Empty Seabed,16.0
+Total False Positives,29.0
+False Negatives (Missed MILCO),84.0
+False Negatives (Missed NOMBO),41.0
+Total False Negatives,125.0
+Operational Precision,0.3696
+Operational Recall,0.1197
+Operational F1-Score,0.1809
