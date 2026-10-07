@@ -1,4 +1,5 @@
-path: /Users/captmj/Downloads/New_Dataset/milco_dataset
+# MILCO/NOMBO Year-Disjoint Dataset Configuration
+path: C:/Users/HP/project/New_Dataset/milco_dataset
 
 train:
   - images/2010

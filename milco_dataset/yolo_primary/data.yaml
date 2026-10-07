@@ -1,4 +1,4 @@
-path: /Users/captmj/Downloads/New_Dataset/milco_dataset/yolo_primary
+path: C:/Users/HP/project/New_Dataset/milco_dataset/yolo_primary
 train: images/train
 val: images/val
 test: images/test
